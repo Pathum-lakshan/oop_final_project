@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="jasperReserved" pageWidth="350" pageHeight="200" orientation="Landscape" columnWidth="350" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1170dc8e-b3bb-4b06-86dc-52963f7ed5f0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="CustomerName" class="java.lang.String"/>
+	<parameter name="ComputerID" class="java.lang.String"/>
+	<parameter name="PackageName" class="java.lang.String"/>
+	<parameter name="PackagePrice" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="200" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="0" y="-2" width="350" height="202" forecolor="#030303" backcolor="#030303" uuid="852c19cf-79c9-4211-84df-1ecf373b0125"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="140" y="10" width="189" height="30" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="fe26a84f-acee-4f44-ae04-b4255ca81313"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Computer Reserved]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="92" width="189" height="30" forecolor="#FFFFFF" uuid="1a429cb4-be54-46af-a52e-4ee65ad70138"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CustomerName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="130" width="100" height="30" forecolor="#FFFFFF" uuid="862032bd-40d3-4ba2-8223-1304c5543c25"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Computer ID -]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="130" width="100" height="30" forecolor="#FFFFFF" uuid="81b452a1-cccf-4135-abd8-486b356564d8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ComputerID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="160" width="115" height="30" forecolor="#FFFFFF" uuid="ce0ff501-8f28-4478-8d87-7a318be84db8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Package Name - ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="160" width="100" height="30" forecolor="#FFFFFF" uuid="a1f15fcd-2fd3-4306-96f8-c1cdc3b497f0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PackageName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="170" width="70" height="30" forecolor="#FFFFFF" uuid="a2e2f98b-44f8-420d-8418-bd3da78cb30d"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PackagePrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="49" width="209" height="30" forecolor="#FFFFFF" uuid="2b5f7abb-cdd8-46bd-8b53-9d775ba6441d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Enjoye Your Gaming Life]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="170" width="40" height="30" forecolor="#FFFFFF" uuid="00365880-3421-4a62-8b41-d3ea6a7ea318"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[RS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="-2" width="140" height="132" uuid="40401831-fbbe-4439-a10d-cbfc41fc2597"/>
+				<imageExpression><![CDATA["Assert/images/images.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+</jasperReport>

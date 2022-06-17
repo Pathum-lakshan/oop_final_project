@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="WorkingContex" prefHeight="1030.0" prefWidth="1529.0" stylesheets="@../../Assert/css/Table.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DashBoardControllers.ManageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="557.0" layoutX="960.0" layoutY="49.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="455.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="655.0" layoutX="14.0" layoutY="49.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="455.0" />
+      <JFXComboBox fx:id="cmbCustomerID" focusColor="WHITE" labelFloat="true" layoutX="57.0" layoutY="117.0" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Customer" style="-fx-prompt-text-fill: #FFFFFF;" styleClass="root" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtCustomerName" focusColor="WHITE" labelFloat="true" layoutX="57.0" layoutY="222.0" onKeyReleased="#CnameOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Customer Name" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerNIC" focusColor="WHITE" labelFloat="true" layoutX="57.0" layoutY="327.0" onKeyReleased="#CNICOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Customer NIC" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerEmailAddress" focusColor="WHITE" labelFloat="true" layoutX="57.0" layoutY="432.0" onKeyReleased="#CEmailOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Customer Email Address" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerPhone" focusColor="WHITE" labelFloat="true" layoutX="57.0" layoutY="537.0" onKeyReleased="#CPhoneOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Customer Phone" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnDelUpCustomer" layoutX="148.0" layoutY="625.0" onAction="#upDltCustomerOnAction" opacity="0.65" prefHeight="60.0" prefWidth="278.0" styleClass="menuItem2" stylesheets="@../../Assert/css/css.css" text="Delete Customer">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="247.0" layoutX="14.0" layoutY="711.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="455.0" />
+      <JFXComboBox fx:id="cmbComputerID" focusColor="WHITE" labelFloat="true" layoutX="33.0" layoutY="778.0" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Computer" style="-fx-prompt-text-fill: #FFFFFF;" styleClass="root" unFocusColor="BLACK" />
+      <JFXButton layoutX="128.0" layoutY="866.0" onAction="#deleteComputerOnAction" opacity="0.65" prefHeight="60.0" prefWidth="278.0" styleClass="menuItem2" stylesheets="@../../Assert/css/css.css" text="Delete Computer">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="557.0" layoutX="477.0" layoutY="49.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="476.0" />
+      <JFXTextField fx:id="txtPackageType" focusColor="WHITE" labelFloat="true" layoutX="532.0" layoutY="254.0" onKeyReleased="#pTypeOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Package Type" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPackagePrice" focusColor="WHITE" labelFloat="true" layoutX="532.0" layoutY="359.0" onKeyReleased="#cPriceOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Package Price" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnDeletePackage" layoutX="623.0" layoutY="447.0" onAction="#deletePackageOnAction" opacity="0.65" prefHeight="60.0" prefWidth="278.0" styleClass="menuItem2" stylesheets="@../../Assert/css/css.css" text="Delete Package">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbPackageID" focusColor="WHITE" labelFloat="true" layoutX="532.0" layoutY="149.0" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Package" style="-fx-prompt-text-fill: #FFFFFF;" styleClass="root" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtItemName" focusColor="WHITE" labelFloat="true" layoutX="1003.0" layoutY="227.0" onKeyReleased="#txtItemNameOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Item Name" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtItemQtY" focusColor="WHITE" labelFloat="true" layoutX="1003.0" layoutY="437.0" onKeyReleased="#txtitemQtyOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Item Qty" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAddItem" layoutX="1094.0" layoutY="525.0" onAction="#addItemOnAction" opacity="0.65" prefHeight="60.0" prefWidth="278.0" style="-fx-text-opacity: 0.5;" styleClass="menuItem2" stylesheets="@../../Assert/css/css.css" text="Delete Item">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbItemID" focusColor="WHITE" labelFloat="true" layoutX="1003.0" layoutY="122.0" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Item" style="-fx-prompt-text-fill: #FFFFFF;" styleClass="root" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbItemType" focusColor="WHITE" labelFloat="true" layoutX="1003.0" layoutY="332.0" onKeyReleased="#itemOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Item Type" style="-fx-prompt-text-fill: #FFFFFF;" styleClass="root" unFocusColor="BLACK" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="347.0" layoutX="476.0" layoutY="611.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="938.0" />
+      <JFXTextField fx:id="txtRepairAbout" focusColor="WHITE" labelFloat="true" layoutX="985.0" layoutY="665.0" onKeyReleased="#aboutRepairOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="About" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnaddDeleteUpRepair" layoutX="1076.0" layoutY="866.0" onAction="#addRepairOnAction" opacity="0.65" prefHeight="60.0" prefWidth="278.0" styleClass="menuItem2" stylesheets="@../../Assert/css/css.css" text="ADD Repair">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbRItem" focusColor="WHITE" labelFloat="true" layoutX="532.0" layoutY="665.0" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Item  Name And ID" style="-fx-prompt-text-fill: #FFFFFF;" styleClass="root" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbRComputer" focusColor="WHITE" labelFloat="true" layoutX="532.0" layoutY="760.0" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Computer" style="-fx-prompt-text-fill: #FFFFFF;" styleClass="root" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtTimeToRepair" focusColor="WHITE" labelFloat="true" layoutX="985.0" layoutY="760.0" onKeyReleased="#aboutRepairOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Time taken to repair and complete" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

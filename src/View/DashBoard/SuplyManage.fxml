@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="WorkingContex" prefHeight="1030.0" prefWidth="1529.0" stylesheets="@../../Assert/css/Table.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DashBoardControllers.SuplyManageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="662.0" layoutX="36.0" layoutY="14.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="455.0" />
+      <JFXTextField fx:id="txtsupplyitemname" focusColor="WHITE" labelFloat="true" layoutX="79.0" layoutY="171.0" onKeyReleased="#txtSupplyItemNameOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Suply Item Name" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSupplyItemQty" focusColor="WHITE" labelFloat="true" layoutX="79.0" layoutY="381.0" onKeyReleased="#txtSupplyItemQtyOnAction" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Supply Item Qty" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSupplyCost" focusColor="WHITE" labelFloat="true" layoutX="79.0" layoutY="486.0" onKeyReleased="#txtSupplyCostOnAction" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Supply Cost" style="-fx-prompt-text-fill: white;" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAddDeltupSupply" layoutX="170.0" layoutY="574.0" onAction="#btnAddDeltupSupplyOnAction" opacity="0.65" prefHeight="60.0" prefWidth="278.0" style="-fx-text-opacity: 0.5;" styleClass="menuItem2" stylesheets="@../../Assert/css/css.css" text="Add Suply">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbSupplyItemType" focusColor="WHITE" labelFloat="true" layoutX="79.0" layoutY="276.0" onKeyReleased="#SuplyitemTypeOnKeyRelease" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Suply Item Type" style="-fx-prompt-text-fill: #FFFFFF;" styleClass="root" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="cmbSupplyID" focusColor="WHITE" labelFloat="true" layoutX="79.0" layoutY="61.0" onAction="#cmbSupplyIDOnAction" onKeyReleased="#supplyIDOnKeyRelese" opacity="0.65" prefHeight="50.0" prefWidth="369.0" promptText="Supply ID" style="-fx-prompt-text-fill: #FFFFFF;" styleClass="root" unFocusColor="BLACK" />
+      <TableView fx:id="tblSupply" layoutX="36.0" layoutY="693.0" opacity="0.7" prefHeight="337.0" prefWidth="803.0">
+        <columns>
+          <TableColumn fx:id="colSupplyID" prefWidth="72.0" text="Supply ID" />
+          <TableColumn fx:id="colSupplyName" prefWidth="299.9999694824219" text="Supply Name" />
+            <TableColumn fx:id="colSupplyType" prefWidth="123.0" text="Supply Type" />
+            <TableColumn fx:id="colSupplyQty" prefWidth="87.0" text="Supply Qty" />
+            <TableColumn fx:id="colSupplyCost" prefWidth="86.0" text="Supply Cost " />
+            <TableColumn fx:id="colSupplyDate" prefWidth="136.0" text="Supply Date Time" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblItem" layoutX="847.0" layoutY="693.0" opacity="0.7" prefHeight="337.0" prefWidth="668.0">
+         <columns>
+            <TableColumn fx:id="ColItemID" prefWidth="97.0" text="Item ID" />
+            <TableColumn fx:id="ColItemName" prefWidth="350.0" text="Item Name" />
+            <TableColumn fx:id="ColItemType" prefWidth="143.0" text="Item Type" />
+            <TableColumn fx:id="ColItemQty" prefWidth="89.0" text="Item Qty" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblDetails" layoutX="1109.0" layoutY="14.0" opacity="0.7" prefHeight="662.0" prefWidth="406.0">
+        <columns>
+          <TableColumn fx:id="colDetailSupluId" prefWidth="205.0" text="Supply ID" />
+          <TableColumn fx:id="colDetailsItemId" prefWidth="200.0" text="Item ID" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="175.0" layoutX="507.0" layoutY="21.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="350.0" />
+      <VBox layoutX="554.0" layoutY="34.0" prefHeight="150.0" prefWidth="250.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="234.0">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assert/images/icons8-supply-60.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" opacity="0.78" prefHeight="33.0" prefWidth="237.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="266.0" text="Number Of Monthly Supply" textFill="#ffffff8c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="41.0" prefWidth="247.0">
+               <children>
+                  <Label fx:id="lblmonthlysupply" alignment="CENTER" contentDisplay="CENTER" opacity="0.78" prefHeight="57.0" prefWidth="247.0" text="05" textFill="#ffffff8c">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="175.0" layoutX="507.0" layoutY="256.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="350.0" />
+      <VBox layoutX="554.0" layoutY="269.0" prefHeight="150.0" prefWidth="250.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="234.0">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assert/images/icons8-supply-60.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" opacity="0.78" prefHeight="33.0" prefWidth="237.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="266.0" text="Number Of ToDay Supply" textFill="#ffffff8c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="41.0" prefWidth="247.0">
+               <children>
+                  <Label fx:id="lbltodaySupply" alignment="CENTER" contentDisplay="CENTER" opacity="0.78" prefHeight="57.0" prefWidth="247.0" text="12" textFill="#ffffff8c">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="175.0" layoutX="507.0" layoutY="487.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="350.0" />
+      <VBox layoutX="554.0" layoutY="500.0" prefHeight="150.0" prefWidth="250.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="234.0">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Assert/images/icons8-stock-64.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" opacity="0.78" prefHeight="33.0" prefWidth="237.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="34.0" prefWidth="266.0" text="Number Of Items" textFill="#ffffff8c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="41.0" prefWidth="247.0">
+               <children>
+                  <Label fx:id="lblNumberOfItems" alignment="CENTER" contentDisplay="CENTER" opacity="0.78" prefHeight="57.0" prefWidth="247.0" text="12" textFill="#ffffff8c">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

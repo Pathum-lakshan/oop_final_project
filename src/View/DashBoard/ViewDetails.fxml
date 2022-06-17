@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="WorkingContex" prefHeight="1030.0" prefWidth="1529.0" stylesheets="@../../Assert/css/Table.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DashBoardControllers.ViewDetailsController">
+   <children>
+      <TableView fx:id="tblCustomer" layoutX="23.0" layoutY="561.0" opacity="0.7" prefHeight="455.0" prefWidth="911.0">
+        <columns>
+          <TableColumn fx:id="colCustomerID" prefWidth="75.0" text="Customer ID" />
+          <TableColumn fx:id="colCustomerName" prefWidth="284.0" text="Customer Name" />
+            <TableColumn fx:id="colCustomerNIC" prefWidth="152.0" text="Customer NIC" />
+            <TableColumn fx:id="colCustomerEmail" prefWidth="172.0" text="Customer Email" />
+            <TableColumn fx:id="colCustomerContact" prefWidth="158.0" text="Customer Contact " />
+            <TableColumn fx:id="colCustomerUserID" prefWidth="69.0" text="User ID" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblComputer" layoutX="946.0" layoutY="561.0" opacity="0.7" prefHeight="455.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colComputerID" prefWidth="75.0" text="Computer ID" />
+          <TableColumn fx:id="colStatus" prefWidth="124.0" text="Status" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblPackage" layoutX="1156.0" layoutY="561.0" opacity="0.7" prefHeight="455.0" prefWidth="328.0">
+         <columns>
+            <TableColumn fx:id="colPackageID" prefWidth="75.0" text="Package ID" />
+            <TableColumn fx:id="ColPackagePriceone" prefWidth="124.0" text="Package Price" />
+            <TableColumn fx:id="colPackageType" prefWidth="128.0" text="Package Type" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblReserve" layoutX="23.0" layoutY="60.0" opacity="0.7" prefHeight="455.0" prefWidth="328.0">
+         <columns>
+            <TableColumn fx:id="colRCOID" prefWidth="77.0" text="Computer ID " />
+            <TableColumn fx:id="colRCUID" prefWidth="98.0" text="Customer ID" />
+            <TableColumn fx:id="colRDT" prefWidth="152.0" text="Date Time" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tblPackageDetails" layoutX="363.0" layoutY="60.0" opacity="0.7" prefHeight="455.0" prefWidth="328.0">
+         <columns>
+            <TableColumn fx:id="colPDPAID" prefWidth="77.0" text="Package ID" />
+            <TableColumn fx:id="colPDCUID" prefWidth="98.0" text="Customer ID" />
+            <TableColumn fx:id="colPDIncome" prefWidth="152.0" text="Income" />
+         </columns>
+      </TableView>
+      <BarChart fx:id="barChartview" layoutX="701.0" layoutY="60.0" opacity="0.68" prefHeight="455.0" prefWidth="783.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

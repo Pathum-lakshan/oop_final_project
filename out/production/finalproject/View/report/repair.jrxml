@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repair" columnCount="3" pageWidth="400" pageHeight="400" columnWidth="133" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="29289be8-33d8-48dd-b74f-940516ea9d94">
+	<parameter name="About" class="java.lang.String"/>
+	<parameter name="ComputerID" class="java.lang.String"/>
+	<parameter name="ItemName" class="java.lang.String"/>
+	<parameter name="reparedTime" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="400" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<rectangle>
+				<reportElement x="0" y="0" width="400" height="400" backcolor="#030101" uuid="93c10519-7a56-4531-9459-828f00506584">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="170" y="40" width="190" height="30" forecolor="#FFFFFF" uuid="ee8ed3c5-bfd0-4b94-bf5c-a19d407b9a39"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Repairing Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="9" y="10" width="249" height="140" uuid="f339f99c-31ab-4bc6-be22-5157e0d787d0"/>
+				<imageExpression><![CDATA["Assert/images/images.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="30" y="170" width="72" height="30" forecolor="#FFFFFF" uuid="4fff8c71-bf38-4e59-b1e7-cf0de2055e3b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[About - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="210" width="119" height="30" forecolor="#FFFFFF" uuid="d77d6404-0f7a-4ea0-9797-4c5446f0bd5d">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Computer ID - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="250" width="100" height="30" forecolor="#FFFFFF" uuid="bb63358c-4253-46d7-895a-a0cf393b1c87">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Name - ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="290" width="130" height="30" forecolor="#FFFFFF" uuid="d83ea16d-551a-46d6-bcc1-1ac972577541">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Time To Repair - ]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="260" y="370" width="100" height="30" forecolor="#FFFFFF" uuid="11184ae9-f80f-4139-b36c-5edae5ae1f97"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="360" y="370" width="39" height="30" forecolor="#FFFFFF" uuid="71111b6f-9aaf-4d3a-9386-0a026cee5404"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="170" width="100" height="30" forecolor="#FFFFFF" uuid="473b3f71-47c2-4274-86bb-805b83964c81">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{About}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="210" width="100" height="30" forecolor="#FFFFFF" uuid="22cd7337-0a8b-4d16-b7e1-d94e6f388dcc">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ComputerID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="250" width="100" height="30" forecolor="#FFFFFF" uuid="646526e5-5751-4a03-8e71-fc2b12dfd445">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ItemName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="290" width="190" height="30" forecolor="#FFFFFF" uuid="0cf92bb8-178e-428f-9c43-4a9329766c8f">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reparedTime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

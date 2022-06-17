@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="DashBoardContex" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../../Assert/css/Table.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DashBoardControllers.DashBoardController">
+    <children>
+        <ImageView fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../Assert/images/High.png" />
+            </image>
+         <effect>
+            <Lighting diffuseConstant="1.14" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#d0d0d0e5" />
+               </light>
+            </Lighting>
+         </effect>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000c0" height="1080.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" />
+        <BorderPane prefHeight="1080.0" prefWidth="1920.0">
+            <top>
+                <AnchorPane prefHeight="50.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXButton onAction="#reserveOnAction" prefHeight="50.0" prefWidth="239.0" styleClass="menuItem" stylesheets="@../../Assert/css/css.css" text="Reserve Computer" textFill="#ffffff8c">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton layoutX="239.0" onAction="#manageOnAction" prefHeight="50.0" prefWidth="239.0" styleClass="menuItem" stylesheets="@../../Assert/css/css.css" text="Manage" textFill="#ffffff8c">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton layoutX="717.0" onAction="#viewReserveDetailsOnAction" prefHeight="50.0" prefWidth="239.0" styleClass="menuItem" stylesheets="@../../Assert/css/css.css" text="View Reserve Details" textFill="#ffffff8c">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton layoutX="478.0" onAction="#suplyManageOnAction" prefHeight="50.0" prefWidth="239.0" styleClass="menuItem" stylesheets="@../../Assert/css/css.css" text="Supply Manage" textFill="#ffffff8c">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton layoutX="956.0" onAction="#incomeExpensesOnAction" prefHeight="50.0" prefWidth="239.0" styleClass="menuItem" stylesheets="@../../Assert/css/css.css" text="Income Expense" textFill="#ffffff8c">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </JFXButton>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1872.0" layoutY="8.0" onMouseClicked="#closeMouseOnAction" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Assert/images/outline_close_white_48dp.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1705.0" layoutY="8.0" onMouseClicked="#homeOnMouseClick" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Assert/images/outline_home_white_48dp.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1791.0" layoutY="8.0" onMouseClicked="#logOutMouseClickOnAction" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Assert/images/outline_logout_white_48dp.png" />
+                            </image>
+                        </ImageView>
+                  <Label fx:id="lblTimeDate" alignment="CENTER" layoutX="1434.0" layoutY="8.0" prefHeight="34.0" prefWidth="266.0" textFill="#ffffff8c">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </AnchorPane>
+            </top>
+            <right>
+                <AnchorPane prefHeight="1040.0" prefWidth="392.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="175.0" layoutX="21.0" layoutY="73.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="350.0" />
+                        <VBox layoutX="68.0" layoutY="86.0" prefHeight="150.0" prefWidth="250.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="234.0">
+                                    <children>
+                                        <ImageView fitHeight="55.0" fitWidth="55.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../Assert/images/icons8-computer-64.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" opacity="0.78" prefHeight="33.0" prefWidth="237.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="266.0" text="Num of computers currently in use" textFill="#ffffff8c">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="41.0" prefWidth="247.0">
+                                    <children>
+                                        <Label fx:id="lblnumberofUsedCmptr" alignment="CENTER" contentDisplay="CENTER" opacity="0.78" prefHeight="57.0" prefWidth="247.0" text="05" textFill="#ffffff8c">
+                                            <font>
+                                                <Font name="System Bold" size="21.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="175.0" layoutX="21.0" layoutY="308.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="350.0" />
+                        <VBox layoutX="68.0" layoutY="321.0" prefHeight="150.0" prefWidth="250.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="234.0">
+                                    <children>
+                                        <ImageView fitHeight="55.0" fitWidth="55.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../Assert/images/icons8-customer-64.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" opacity="0.78" prefHeight="33.0" prefWidth="237.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="266.0" text="Number of customers visited today" textFill="#ffffff8c">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="41.0" prefWidth="247.0">
+                                    <children>
+                                        <Label fx:id="lblToDayCustomer" alignment="CENTER" contentDisplay="CENTER" opacity="0.78" prefHeight="57.0" prefWidth="247.0" text="12" textFill="#ffffff8c">
+                                            <font>
+                                                <Font name="System Bold" size="21.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="175.0" layoutX="21.0" layoutY="543.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="350.0" />
+                        <VBox layoutX="68.0" layoutY="556.0" prefHeight="150.0" prefWidth="250.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="234.0">
+                                    <children>
+                                        <ImageView fitHeight="55.0" fitWidth="55.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../Assert/images/icons8-package-settings-100.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" opacity="0.78" prefHeight="33.0" prefWidth="237.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="266.0" text="Number of packages" textFill="#ffffff8c">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="41.0" prefWidth="247.0">
+                                    <children>
+                                        <Label fx:id="lblcountpackages" alignment="CENTER" contentDisplay="CENTER" opacity="0.78" prefHeight="57.0" prefWidth="247.0" text="08" textFill="#ffffff8c">
+                                            <font>
+                                                <Font name="System Bold" size="21.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff1f" height="175.0" layoutX="21.0" layoutY="782.0" opacity="0.49" stroke="TRANSPARENT" strokeType="INSIDE" width="350.0" />
+                        <VBox layoutX="68.0" layoutY="795.0" prefHeight="150.0" prefWidth="250.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="234.0">
+                                    <children>
+                                        <ImageView fitHeight="55.0" fitWidth="55.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../Assert/images/dolar.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" opacity="0.78" prefHeight="33.0" prefWidth="237.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="266.0" text="Earnings for today" textFill="#ffffff8c">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" prefHeight="41.0" prefWidth="247.0">
+                                    <children>
+                                        <Label fx:id="lbltodayincome" alignment="CENTER" contentDisplay="CENTER" opacity="0.78" prefHeight="57.0" prefWidth="247.0" text="12000 LKR" textFill="#ffffff8c">
+                                            <font>
+                                                <Font name="System Bold" size="21.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </right>
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane fx:id="WorkingContex" prefHeight="1030.0" prefWidth="1529.0" />
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
